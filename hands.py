@@ -12,8 +12,8 @@ mp_drawing_styles = mp.solutions.drawing_styles
 mp_hands = mp.solutions.hands
 
 msg = ""
-# url = 'http://26.159.42.140:8080/shot.jpg'
-url = 'http://192.168.1.4:8080/shot.jpg'
+url = 'http://26.159.42.140:8080/shot.jpg'
+# url = 'http://1.4:8080/shot.jpg'
 
 with mp_hands.Hands(
     model_complexity=0,
@@ -54,9 +54,9 @@ with mp_hands.Hands(
                 # Send coordinates to client
                 msg = ""
                 for i in range(len(hand_landmarks.landmark)):
-                    hx = round(hand_landmarks.landmark[i].x, 3)
-                    hy = round(hand_landmarks.landmark[i].y, 3)
-                    hz = round(hand_landmarks.landmark[i].z, 3)
+                    hx = round(hand_landmarks.landmark[i].x, 5)
+                    hy = round(hand_landmarks.landmark[i].y, 5)
+                    hz = round(hand_landmarks.landmark[i].z, 5)
 
                     hl = str(hx) + ',' +  str(hy) + ',' + str(hz) + ','
                     msg += hl
