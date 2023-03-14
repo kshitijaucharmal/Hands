@@ -13,7 +13,7 @@ mp_hands = mp.solutions.hands
 
 msg = ""
 url = 'http://26.159.42.140:8080/shot.jpg'
-# url = 'http://1.4:8080/shot.jpg'
+# url = 'http://192.168.43.1:8080/shot.jpg'
 
 with mp_hands.Hands(
     model_complexity=0,
